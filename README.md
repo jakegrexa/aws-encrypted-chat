@@ -3,9 +3,9 @@
 <img src="/images/message-circle.svg" align="left"
 width="200" hspace="10" vspace="10">
 
-AWS Encrypted Chat is a free chat services utilizing AWS AppSync and AWS S3.
+AWS Encrypted Chat is a chat services primarily utilizing AWS AppSync and AWS S3.
         
-## Features
+## Application Architecture
 
-Current features of AWS Encrypted Chat:
-- None Yet
+<img src="/images/application-architecture.png" align="center"
+width="400">
