@@ -1,6 +1,6 @@
 projects:
-  ChatApp:
-    schemaPath: src/graphql/schema.json
+  awsencryptedchat:
+    schemaPath: graphql/schema.json
     includes:
       - src/graphql/**/*.js
     excludes:
@@ -10,9 +10,3 @@ projects:
         codeGenTarget: javascript
         generatedFileName: ''
         docsFilePath: src/graphql
-        region: us-east-1
-        apiId: 74dzqbh2mnfsbdy2t7ygoxwkua
-        maxDepth: 4
-extensions:
-  amplify:
-    version: 3
