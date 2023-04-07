@@ -1,72 +1,42 @@
-# ☁️ AWS Encrypted Chat 💬
+## Modern Chat app Frontend
 
-AWS Encrypted Chat is a chat service based on AWS and NextJS.
+🚨 Note that this project does not create our backend services via the Amplify CLI, but relies on exported values from the AWS CDK.
 
-## Frontend Architecture
+🚨 This application is part of a blog post that explains both the frontend and the backend as a whole. The backend repo can be found [here](https://github.com/Focus-Otter/fullstack-cdk-helpers/blob/main/README.md)
 
-AWS Encrypted Chat uses the NextJS React Framework and is hosted using AWS Amplify.
-        
-## Backend Architecture
+![ezgif-5-31ccf9d033](https://user-images.githubusercontent.com/5106417/184162547-1a3ab9b4-8f91-4a81-be58-f6af35469e02.gif)
 
-AWS Encrypted Chat uses the following AWS Services:
-* Amazon Cogito for authentication.
-* AWS AppSync for mapping databases and real-time notifications.
-* AWS Lambda for creating initialization triggers for adding users to the database with Amazon Cognito, providing a list of active and inactive users.
-* Amazon DynamoDB for creating a multi-table database for users and messages.
-* Amazon S3 for storing user uploads and front-end web resources.
+## Overview
 
-<p align="center">
-        <img src="/images/architecture-diagram.png" width="500">
-</p>
+This repo is the frontend to building a fullstack chat app. The backend can be found [here](https://github.com/Focus-Otter/chat-cdk-backend).
 
-## Getting Started:
+![image](https://user-images.githubusercontent.com/5106417/184164922-9cbe806e-bb41-4341-89f5-eb419df915b3.png)
 
-### Required Software:
-- Node.js (Windows/Mac/Linux):
-Node.js is an asynchronous event-driven JavaScript runtime designed to build scalable network applications. To install Node.js, visit the Node.js <a href="https://nodejs.org/en/download" download>download page</a> and select the version relevant to your machine.
-- VS Code (Windows/Mac/Linux):
-If you do not have a preffered editor, VS Code is a useful editor for this project. To install VS Code, visit the Visual Studio Code <a href="https://code.visualstudio.com/Download" download>download page</a>.
+## Tech Stack
 
-### Running The Application:
-- Once all required software is installed, navigate to the working directory through your terminal and enter `npm run dev`.
-- Now, visit `localhost:3000/`. 
- 
-### Amazon Cognito
+- React Framework: NextJS
+- UI Library: AWS Amplify UI primitives
+- API: GraphQL via AWS AppSync
+- File uploads: Sent to Amazon S3
+- Signup/SignIn: Managed with Cognito
+- Backend Binding: amplify-js
 
-The `lib/authStack.ts` file creates the following services
+## Steps to get started
 
-- Cognito user pool
-- Cognito user pool group (if specified)
-- Cognito identity pool
+Once [the backend ](https://github.com/Focus-Otter/fullstack-cdk-helpers/blob/main/README.md) is deployed, it will output a set of values. The outputted values are what you'll need to get this project working.
 
-🗒️ The identity pool helps in providing IAM permission access to both authenticated and unauthenticated users as well as AWS services such as Amazon S3.
+1. Run `amplify init`
+2. Run `amplify add codegen --apiId YOUR_APPID` (value generated from the backend)
+3. `amplify codegen` (accept the defaults, but set the max-depth to 4)
+4. Create a `src/aws-exports.js` file and bring over the values from your CDK backend and ensure your project looks like the `sample.aws-exports.js` file.
+5. Run the app and create 2 users
+6. Once signed in, create a room.
+7. You should now be able to view the rooms on the homepage. Click one and begin creating messages.
 
-### AWS Lambda
+## Security
 
-The `lib/functions` directory contains a `postConfirmationTrigger` folder. The Lambda function in this folder adds a user to DynamoDB after a user signs up through our Cognito service.
-
-### Amazon Simple Storage Service (Amazon S3)
-
-The `lib/fileStorage.ts` file creates an Amazon S3 bucket and comes configured with managed polices that are in line with what the [Amplify Storage](https://docs.amplify.aws/cli/storage/import/#configuring-iam-role-to-use-amplify-recommended-policies) library uses as acceptable defaults.
-
-### AWS AppSync API
-
-The`lib/apiStack.ts` file creates an AWS AppSync API that is based on a `Todo` application.
-
-In addition, this package makes use of the `@aws-cdk/aws-appsync-alpha` [npm package](https://www.npmjs.com/package/@aws-cdk/aws-appsync-alpha) for easily creating the request and response mapping templates.
-
-### Amazon DynamoDB API
-
-The `lib/databaseStack.ts` file creates a single DynamoDB table that is used as a datasource for the AWS AppSync API above.
-
-## Useful commands
-
-- `npm run build` compile typescript to js
-- `npm run watch` watch for changes and compile
-- `cdk deploy` deploy this stack to your default AWS account/region
-- `cdk diff` compare deployed stack with current state
-- `cdk synth` emits the synthesized CloudFormation template
+See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
 
 ## License
 
-This library is licensed under the MIT-0 License. For more information, see the LICENSE file.
+This library is licensed under the MIT-0 License. See the LICENSE file.

@@ -1,12 +1,6 @@
 export type AmplifyDependentResourcesAttributes = {
-  "api": {
-    "awsencryptedchat": {
-      "GraphQLAPIEndpointOutput": "string",
-      "GraphQLAPIIdOutput": "string"
-    }
-  },
   "auth": {
-    "awsencryptedchat1199ab4e": {
+    "awschat9debe96a": {
       "AppClientID": "string",
       "AppClientIDWeb": "string",
       "IdentityPoolId": "string",
