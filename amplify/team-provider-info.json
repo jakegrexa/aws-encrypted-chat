@@ -1,32 +1,22 @@
 {
   "dev": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-awschat-dev-153509-authRole",
-      "UnauthRoleArn": "arn:aws:iam::569690569638:role/amplify-awschat-dev-153509-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::569690569638:role/amplify-awschat-dev-153509-authRole",
+      "AuthRoleName": "amplify-awsencryptedchat-dev-120228-authRole",
+      "UnauthRoleArn": "arn:aws:iam::569690569638:role/amplify-awsencryptedchat-dev-120228-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::569690569638:role/amplify-awsencryptedchat-dev-120228-authRole",
       "Region": "us-east-1",
-      "DeploymentBucketName": "amplify-awschat-dev-153509-deployment",
-      "UnauthRoleName": "amplify-awschat-dev-153509-unauthRole",
-      "StackName": "amplify-awschat-dev-153509",
-      "StackId": "arn:aws:cloudformation:us-east-1:569690569638:stack/amplify-awschat-dev-153509/f9ebd890-d3e8-11ed-8d4d-122189d216af",
-      "AmplifyAppId": "d3rqblbxioou8n"
-    }
-  },
-  "nextjschat": {
-    "awscloudformation": {
-      "AuthRoleName": "amplify-awschat-nextjschat-105602-authRole",
-      "UnauthRoleArn": "arn:aws:iam::569690569638:role/amplify-awschat-nextjschat-105602-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::569690569638:role/amplify-awschat-nextjschat-105602-authRole",
-      "Region": "us-east-1",
-      "DeploymentBucketName": "amplify-awschat-nextjschat-105602-deployment",
-      "UnauthRoleName": "amplify-awschat-nextjschat-105602-unauthRole",
-      "StackName": "amplify-awschat-nextjschat-105602",
-      "StackId": "arn:aws:cloudformation:us-east-1:569690569638:stack/amplify-awschat-nextjschat-105602/519100e0-d554-11ed-b4d0-1211f8b9d969",
-      "AmplifyAppId": "d1v2ch9mc91w7e"
+      "DeploymentBucketName": "amplify-awsencryptedchat-dev-120228-deployment",
+      "UnauthRoleName": "amplify-awsencryptedchat-dev-120228-unauthRole",
+      "StackName": "amplify-awsencryptedchat-dev-120228",
+      "StackId": "arn:aws:cloudformation:us-east-1:569690569638:stack/amplify-awsencryptedchat-dev-120228/1c5be280-c994-11ed-b25f-0e57cf7a94f5",
+      "AmplifyAppId": "d32o2ooqhaevjp"
     },
     "categories": {
       "auth": {
-        "awschat9debe96a": {}
+        "awsencryptedchat1199ab4e": {}
+      },
+      "api": {
+        "awsencryptedchat": {}
       }
     }
   }

@@ -1,1 +1,0 @@
-export { ConversationBar } from './ConversationBar'
