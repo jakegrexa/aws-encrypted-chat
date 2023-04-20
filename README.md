@@ -30,6 +30,20 @@ If you do not have a preffered editor, VS Code is a useful editor for this proje
 ### Running The Application:
 - Once all required software is installed, navigate to the working directory through your terminal and enter `npm run dev`.
 - Now, visit `localhost:3000/`. 
+- If you run into the error ```Error: error:0308010C:digital envelope routines::unsupported```, you will either need to downgrade your Node.js to version 16 or enable the legacy OpenSSL provider, then retry `npm run dev`:
+
+On Unix-like (Linux, macOS, Git bash, etc.):
+```
+export NODE_OPTIONS=--openssl-legacy-provider
+```
+On Windows command prompt:
+```
+set NODE_OPTIONS=--openssl-legacy-provider
+```
+On PowerShell:
+```
+$env:NODE_OPTIONS = "--openssl-legacy-provider"
+```
  
 ### Amazon Cognito
 
