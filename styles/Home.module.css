@@ -1,0 +1,106 @@
+.background {
+  max-height: 100%;
+  height: 98vh;
+  background-color: #fcfdff;
+  opacity: 0.8;
+  background-image:  radial-gradient(#444cf7 0.5px, transparent 0.5px), radial-gradient(#444cf7 0.5px, #fcfdff 0.5px);
+  background-size: 20px 20px;
+  background-position: 0 0,10px 10px;  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "roboto", sans-serif;
+  max-width: 520px;
+}
+
+.title {
+  font-size: 2.7rem;
+  line-height: 1.25;
+  margin-bottom: 1rem;
+  font-family: "roboto", sans-serif;
+  font-weight: bold;
+}
+
+.chatbox {
+  min-width: 100%;
+  height: 480px;
+  display: flex;
+  overflow-y: auto;
+  flex-direction: column-reverse;
+  text-align: center;
+}
+
+.formContainer {
+  width: 98%;
+  min-height: 48px;
+}
+
+.formBase {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: "16px";
+  height: 100%;
+  width: 100%;
+  padding: 8px;
+}
+
+.textBox {
+  min-height: 48px;
+  width: 100%;
+  padding-left: 24px;
+  padding-right: 8px;
+  background-color: #eef2fb;
+  height: 3rem;
+  font-size: 1.2rem;
+  font-weight: normal;
+  border: none;
+  border-radius: 36px;
+  transition: 300ms;
+}
+
+.buttonImage {
+  background-color: #e6e9ee;
+  height: 3rem;
+  width: 3rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 100%;
+  margin-right: 8px;
+  transition: 300ms;
+}
+.buttonImage:hover {
+  background-color: #c2e7ff;
+  cursor: pointer;
+}
+.buttonImage img {
+  max-height: auto;
+}
+
+.buttonSend {
+  background-color: #e6e9ee;
+  height: 3rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 36px;
+  transition: 300ms;
+  width: 33%;
+}
+.buttonSend:hover {
+  background-color: #c2e7ff;
+  cursor: pointer;
+}
+.buttonSend img {
+  max-height: 50%;
+}

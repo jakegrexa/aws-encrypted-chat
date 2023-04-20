@@ -1,20 +1,17 @@
 {
-  "name": "next-amplified",
+  "name": "live-chat",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "next start"
   },
   "dependencies": {
-    "@aws-amplify/ui-react": "^4.5.1",
-    "aws-amplify": "^5.0.25",
-    "eslint": "8.37.0",
-    "eslint-config-next": "13.2.4",
-    "next": "13.2.4",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "@aws-amplify/ui-react": "^1.2.26",
+    "aws-amplify": "^3.4.3",
+    "next": "10.2.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
   }
 }

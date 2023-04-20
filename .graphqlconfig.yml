@@ -1,6 +1,6 @@
 projects:
-  nextamplified:
-    schemaPath: amplify/backend/api/nextamplified/build/schema.graphql
+  livechat:
+    schemaPath: graphql/schema.json
     includes:
       - src/graphql/**/*.js
     excludes:

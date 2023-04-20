@@ -1,18 +1,16 @@
 export type AmplifyDependentResourcesAttributes = {
   "api": {
-    "nextamplified": {
+    "livechat": {
       "GraphQLAPIEndpointOutput": "string",
-      "GraphQLAPIIdOutput": "string",
-      "GraphQLAPIKeyOutput": "string"
+      "GraphQLAPIIdOutput": "string"
     }
   },
   "auth": {
-    "nextamplified7ef569c6": {
+    "livechatbfa79094": {
       "AppClientID": "string",
       "AppClientIDWeb": "string",
       "IdentityPoolId": "string",
       "IdentityPoolName": "string",
-      "UserPoolArn": "string",
       "UserPoolId": "string",
       "UserPoolName": "string"
     }

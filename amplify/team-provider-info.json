@@ -1,35 +1,40 @@
 {
   "dev": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-nextamplified-dev-135533-authRole",
-      "UnauthRoleArn": "arn:aws:iam::569690569638:role/amplify-nextamplified-dev-135533-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::569690569638:role/amplify-nextamplified-dev-135533-authRole",
-      "Region": "us-east-1",
-      "DeploymentBucketName": "amplify-nextamplified-dev-135533-deployment",
-      "UnauthRoleName": "amplify-nextamplified-dev-135533-unauthRole",
-      "StackName": "amplify-nextamplified-dev-135533",
-      "StackId": "arn:aws:cloudformation:us-east-1:569690569638:stack/amplify-nextamplified-dev-135533/3a9d3620-d4a4-11ed-bfb0-0ae82c9aa677",
-      "AmplifyAppId": "d36kksvoyd9v3w"
-    }
-  },
-  "nextamp": {
-    "awscloudformation": {
-      "AuthRoleName": "amplify-nextamplified-nextamp-182752-authRole",
-      "UnauthRoleArn": "arn:aws:iam::569690569638:role/amplify-nextamplified-nextamp-182752-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::569690569638:role/amplify-nextamplified-nextamp-182752-authRole",
-      "Region": "us-east-1",
-      "DeploymentBucketName": "amplify-nextamplified-nextamp-182752-deployment",
-      "UnauthRoleName": "amplify-nextamplified-nextamp-182752-unauthRole",
-      "StackName": "amplify-nextamplified-nextamp-182752",
-      "StackId": "arn:aws:cloudformation:us-east-1:569690569638:stack/amplify-nextamplified-nextamp-182752/45852770-d4ca-11ed-a026-0e5951eaa6e5",
-      "AmplifyAppId": "d1egkprn0alfkj"
+      "AuthRoleName": "amplify-livechat-dev-103437-authRole",
+      "UnauthRoleArn": "arn:aws:iam::019507542291:role/amplify-livechat-dev-103437-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::019507542291:role/amplify-livechat-dev-103437-authRole",
+      "Region": "ap-southeast-2",
+      "DeploymentBucketName": "amplify-livechat-dev-103437-deployment",
+      "UnauthRoleName": "amplify-livechat-dev-103437-unauthRole",
+      "StackName": "amplify-livechat-dev-103437",
+      "StackId": "arn:aws:cloudformation:ap-southeast-2:019507542291:stack/amplify-livechat-dev-103437/dbabdce0-b05e-11eb-93ff-0260323a6446",
+      "AmplifyAppId": "d3aulpsiryk4tg"
     },
     "categories": {
       "auth": {
-        "nextamplified7ef569c6": {}
+        "livechatbfa79094": {}
+      }
+    }
+  },
+  "testing": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-livechat-testing-124452-authRole",
+      "UnauthRoleArn": "arn:aws:iam::569690569638:role/amplify-livechat-testing-124452-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::569690569638:role/amplify-livechat-testing-124452-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-livechat-testing-124452-deployment",
+      "UnauthRoleName": "amplify-livechat-testing-124452-unauthRole",
+      "StackName": "amplify-livechat-testing-124452",
+      "StackId": "arn:aws:cloudformation:us-east-1:569690569638:stack/amplify-livechat-testing-124452/ac6262c0-df9a-11ed-8670-123af3ec7677",
+      "AmplifyAppId": "d1pyafo4ne8mv2"
+    },
+    "categories": {
+      "auth": {
+        "livechatbfa79094": {}
       },
       "api": {
-        "nextamplified": {}
+        "livechat": {}
       }
     }
   }
