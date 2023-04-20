@@ -37,5 +37,32 @@
         "livechat": {}
       }
     }
+  },
+  "awschat": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-livechat-awschat-183131-authRole",
+      "UnauthRoleArn": "arn:aws:iam::569690569638:role/amplify-livechat-awschat-183131-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::569690569638:role/amplify-livechat-awschat-183131-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-livechat-awschat-183131-deployment",
+      "UnauthRoleName": "amplify-livechat-awschat-183131-unauthRole",
+      "StackName": "amplify-livechat-awschat-183131",
+      "StackId": "arn:aws:cloudformation:us-east-1:569690569638:stack/amplify-livechat-awschat-183131/18dd12d0-dfcb-11ed-ab7e-0e72816b1829",
+      "AmplifyAppId": "d1pyafo4ne8mv2"
+    },
+    "categories": {
+      "auth": {
+        "livechatbfa79094": {}
+      },
+      "api": {
+        "livechat": {}
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d1pyafo4ne8mv2",
+          "type": "cicd"
+        }
+      }
+    }
   }
 }
