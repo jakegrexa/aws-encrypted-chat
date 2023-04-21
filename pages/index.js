@@ -91,6 +91,13 @@ function Home({ messages }) {
   const handleClose = () => {
     setAnchorEl(null);
   };
+  const handleDeleteAccount = () => {
+    // blank slate
+    if (user !== null) {
+      // delete account here
+      handleClose();
+    }
+  };
   const handleLogOut = () => {
     return new Promise((success) => {
       if (user !== null) {
@@ -101,7 +108,7 @@ function Home({ messages }) {
       success();
     });
   };
-  const showProfileMenu = () => {
+  const showProfileMenu = (event) => {
     setAnchorEl(event.currentTarget);
   };
 
@@ -126,12 +133,18 @@ function Home({ messages }) {
               <Menu
                 keepMounted
                 anchorEl={anchorEl}
+                anchorOrigin={{
+                  vertical: 'bottom',
+                  horizontal: 'left',
+                }}
+                transformOrigin={{
+                  vertical: 'top',
+                  horizontal: 'left',
+                }}
                 onClose={handleClose}
                 open={Boolean(anchorEl)}
               >
-                <MenuItem onClick={handleClose}>My Account</MenuItem>
-                <MenuItem onClick={handleClose}>Settings</MenuItem>
-                <MenuItem onClick={handleClose}>Profile</MenuItem>
+                <MenuItem onClick={handleDeleteAccount}>Delete Account</MenuItem>
                 <MenuItem onClick={handleLogOut}>Logout</MenuItem>
               </Menu>
             </label>

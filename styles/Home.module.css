@@ -115,19 +115,17 @@
 .buttonUserProfile {
   background-color: #e6e9ee;
   height: 3rem;
-  width: 3rem;
+  width: auto;
   font-size: 1.2rem;
   font-weight: bold;
   border: none;
-  border-radius: 100%;
-  margin-left: 2rem;
-  margin-right: 2rem;
+  border-radius: 36px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding: 8px 16px;
   transition: 300ms;
 }
 .buttonUserProfile:hover {
   background-color: #c2e7ff;
   cursor: pointer;
-}
-.buttonUserProfile img {
-  max-height: auto;
 }
