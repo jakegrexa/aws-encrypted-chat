@@ -21,10 +21,17 @@
   max-width: 520px;
 }
 
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+
 .title {
-  font-size: 2.7rem;
+  font-size: 2rem;
   line-height: 1.25;
-  margin-bottom: 1rem;
   font-family: "roboto", sans-serif;
   font-weight: bold;
 }
@@ -103,4 +110,24 @@
 }
 .buttonSend img {
   max-height: 50%;
+}
+
+.buttonUserProfile {
+  background-color: #e6e9ee;
+  height: 3rem;
+  width: 3rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 100%;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  transition: 300ms;
+}
+.buttonUserProfile:hover {
+  background-color: #c2e7ff;
+  cursor: pointer;
+}
+.buttonUserProfile img {
+  max-height: auto;
 }

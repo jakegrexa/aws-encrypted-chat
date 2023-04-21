@@ -1,5 +1,10 @@
 import React, { useEffect, useState } from "react";
 import styles from "../styles/Home.module.css";
+// Material UI Elements
+import MenuItem from "@material-ui/core/MenuItem";
+import Button from "@material-ui/core/Button";
+import Menu from "@material-ui/core/Menu";
+// AWS Elements
 import { withAuthenticator } from "@aws-amplify/ui-react";
 import { API, Auth, withSSRContext, graphqlOperation } from "aws-amplify";
 import { listMessages } from "../graphql/queries";
@@ -11,6 +16,8 @@ function Home({ messages }) {
   const [stateMessages, setStateMessages] = useState([...messages]);
   const [messageText, setMessageText] = useState("");
   const [user, setUser] = useState(null);
+  // profile menu variables
+  const [anchorEl, setAnchorEl] = React.useState(null);
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -80,11 +87,55 @@ function Home({ messages }) {
     }
   };
 
+  // Profile Menu Functions
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+  const handleLogOut = () => {
+    return new Promise((success) => {
+      if (user !== null) {
+        user.signOut();
+        handleClose();
+        window.location.reload();
+      }
+      success();
+    });
+  };
+  const showProfileMenu = () => {
+    setAnchorEl(event.currentTarget);
+  };
+
   if (user) {
     return (
       <div className={styles.background}>
         <div className={styles.container}>
-          <h1 className={styles.title}>Welcome to Online Chat</h1>
+          <div className={styles.header}>
+            <h1 className={styles.title}>Welcome, {user.username}</h1>
+            <label htmlFor="icon-button-user-profile">
+              {/* Profile Menu */}
+              <button
+                className={styles.buttonUserProfile}
+                onClick={showProfileMenu}
+                color="primary" 
+                aria-label="user profile" 
+                aria-controls="simple-menu"
+                aria-haspopup="true"
+              >
+                {user.username}
+              </button>
+              <Menu
+                keepMounted
+                anchorEl={anchorEl}
+                onClose={handleClose}
+                open={Boolean(anchorEl)}
+              >
+                <MenuItem onClick={handleClose}>My Account</MenuItem>
+                <MenuItem onClick={handleClose}>Settings</MenuItem>
+                <MenuItem onClick={handleClose}>Profile</MenuItem>
+                <MenuItem onClick={handleLogOut}>Logout</MenuItem>
+              </Menu>
+            </label>
+          </div>
           <div className={styles.chatbox}>
             {stateMessages
               // sort messages oldest to newest client-side
