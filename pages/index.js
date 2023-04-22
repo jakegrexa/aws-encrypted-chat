@@ -85,6 +85,8 @@ function Home({ messages }) {
     } catch (err) {
       console.error(err);
     }
+    window.scrollTo(0, document.body.scrollHeight);
+
   };
 
   // Profile Menu Functions
@@ -117,36 +119,38 @@ function Home({ messages }) {
       <div className={styles.background}>
         <div className={styles.container}>
           <div className={styles.header}>
-            <h1 className={styles.title}>Welcome, {user.username}</h1>
+            <h1 className={styles.title}>Welcome!</h1>
             <label htmlFor="icon-button-user-profile">
               {/* Profile Menu */}
-              <button
-                className={styles.buttonUserProfile}
-                onClick={showProfileMenu}
-                color="primary" 
-                aria-label="user profile" 
-                aria-controls="simple-menu"
-                aria-haspopup="true"
-              >
-                {user.username}
-              </button>
-              <Menu
-                keepMounted
-                anchorEl={anchorEl}
-                anchorOrigin={{
-                  vertical: 'bottom',
-                  horizontal: 'left',
-                }}
-                transformOrigin={{
-                  vertical: 'top',
-                  horizontal: 'left',
-                }}
-                onClose={handleClose}
-                open={Boolean(anchorEl)}
-              >
-                <MenuItem onClick={handleDeleteAccount}>Delete Account</MenuItem>
-                <MenuItem onClick={handleLogOut}>Logout</MenuItem>
-              </Menu>
+              <div className={styles.buttonContainer}>
+                <button
+                  className={styles.buttonUserProfile}
+                  onClick={showProfileMenu}
+                  color="primary" 
+                  aria-label="user profile" 
+                  aria-controls="simple-menu"
+                  aria-haspopup="true"
+                >
+                  {user.username}
+                </button>
+                <Menu
+                  keepMounted
+                  anchorEl={anchorEl}
+                  anchorOrigin={{
+                    vertical: 'bottom',
+                    horizontal: 'left',
+                  }}
+                  transformOrigin={{
+                    vertical: 'top',
+                    horizontal: 'left',
+                  }}
+                  onClose={handleClose}
+                  open={Boolean(anchorEl)}
+                >
+                  <MenuItem onClick={handleDeleteAccount}>Delete Account</MenuItem>
+                  <MenuItem onClick={handleLogOut}>Logout</MenuItem>
+                </Menu>
+              </div>
             </label>
           </div>
           <div className={styles.chatbox}>
@@ -181,6 +185,7 @@ function Home({ messages }) {
               </label>
               <input
                 type="text"
+                autoComplete="off"
                 id="message"
                 name="message"
                 autoFocus

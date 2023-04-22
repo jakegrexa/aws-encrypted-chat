@@ -1,7 +1,8 @@
 .background {
   max-height: 100%;
   height: 100vh;
-  background-color: #fcfdff;
+  background-color: rgba(252, 253, 255, 0.75);
+  backdrop-filter: blur(12px);
   display: flex;
   justify-content: center;
 }
@@ -20,23 +21,29 @@
 
 .header {
   display: flex;
-  height: 5vh;
+  height: 10%;
+  width: 100%;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin: 1rem;
+  background-color: rgba(252, 253, 255, 0.75);
+  backdrop-filter: blur(12px);
 }
 
 .title {
-  font-size: 2rem;
+  height: auto;
+  width: 100%;
+  text-align: left;
   line-height: 1.25;
+  font-size: 1.2rem;
   font-family: "roboto", sans-serif;
   font-weight: bold;
+  margin-left: 1rem;
 }
 
 .chatbox {
   min-width: 100%;
-  height: 80vh;
+  height: 80%;
   display: flex;
   overflow-y: auto;
   flex-direction: column-reverse;
@@ -45,7 +52,9 @@
 
 .formContainer {
   width: 100%;
-  min-height: 10vh;
+  height: 10%;
+  background-color: rgba(252, 253, 255, 0.85);
+  backdrop-filter: blur(12px);
 }
 
 .formBase {

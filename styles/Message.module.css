@@ -31,11 +31,14 @@
 
 .receivedMessage {
   text-align: left;
-  padding: 8px;
+  padding: 12px 24px;
   font-family: "roboto", sans-serif;
   color: #000;
   background: #eef2fb;
   border-radius: 36px;
+  /* animations */
+  animation: expand-bounce 0.25s ease-out 0s forwards;
+  animation-delay: var(--delay);
 }
 
 .senderText {
