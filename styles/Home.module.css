@@ -1,11 +1,8 @@
 .background {
   max-height: 100%;
-  height: 98vh;
+  height: 100vh;
   background-color: #fcfdff;
-  opacity: 0.8;
-  background-image:  radial-gradient(#444cf7 0.5px, transparent 0.5px), radial-gradient(#444cf7 0.5px, #fcfdff 0.5px);
-  background-size: 20px 20px;
-  background-position: 0 0,10px 10px;  display: flex;
+  display: flex;
   justify-content: center;
 }
 
@@ -23,6 +20,7 @@
 
 .header {
   display: flex;
+  height: 5vh;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -38,7 +36,7 @@
 
 .chatbox {
   min-width: 100%;
-  height: 480px;
+  height: 80vh;
   display: flex;
   overflow-y: auto;
   flex-direction: column-reverse;
@@ -46,8 +44,8 @@
 }
 
 .formContainer {
-  width: 98%;
-  min-height: 48px;
+  width: 100%;
+  height: 10vh;
 }
 
 .formBase {
@@ -67,9 +65,11 @@
   padding-left: 24px;
   padding-right: 8px;
   background-color: #eef2fb;
+  box-shadow: 0 4px 0 rgba(0,0,0,.1);
   height: 3rem;
   font-size: 1.2rem;
   font-weight: normal;
+  outline: none;
   border: none;
   border-radius: 36px;
   transition: 300ms;
@@ -85,7 +85,7 @@
   border-radius: 100%;
   box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.1);
   margin-right: 8px;
-  transition: all 300ms ease 0s;
+  transition: all 200ms ease 0s;
 }
 .buttonImage:hover {
   background-color: #c2e7ff;
@@ -107,7 +107,7 @@
   border: none;
   border-radius: 36px;
   box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.1);
-  transition: 300ms;
+  transition: all 200ms ease 0s;
   width: 33%;
 }
 .buttonSend:hover {

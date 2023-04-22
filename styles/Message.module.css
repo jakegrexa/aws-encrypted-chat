@@ -15,6 +15,9 @@
   padding: 12px 24px;
   background: linear-gradient(90deg, rgba(29,120,234,1) 0%, rgba(24,83,202,1) 100%);
   border-radius: 36px;
+  /* animations */
+  animation: expand-bounce 0.25s ease-out 0s forwards;
+  animation-delay: var(--delay);
 }
 
 .receivedMessageContainer {
@@ -40,4 +43,16 @@
   font-size: 14px;
   color: rgba(0, 0, 0, 0.7);
   margin-bottom: 4px;
+}
+
+@keyframes expand-bounce {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

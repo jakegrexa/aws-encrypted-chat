@@ -176,7 +176,7 @@ function Home({ messages }) {
                   className={styles.buttonImage}
                   color="primary" 
                   aria-label="upload picture" 
-                  component="span">
+                  component="span">📷
                 </button>
               </label>
               <input
