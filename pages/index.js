@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import styles from "../styles/Home.module.css";
 // Material UI Elements
 import MenuItem from "@material-ui/core/MenuItem";
-import Button from "@material-ui/core/Button";
 import Menu from "@material-ui/core/Menu";
 // AWS Elements
 import { withAuthenticator } from "@aws-amplify/ui-react";
@@ -174,13 +173,15 @@ function Home({ messages }) {
                 src="src/assets/round_add_a_photo_black_48dp.png"
                 id="icon-button-file"
                 type="file" 
+                onChange={(e) => storeFile(e)}
                 style={{ display: 'none' }}/>
               <label htmlFor="icon-button-file">
                 <button
                   className={styles.buttonImage}
                   color="primary" 
                   aria-label="upload picture" 
-                  component="span">📷
+                  component="span">
+                    <img src="https://amplify-livechat-awschat-183131-assets.s3.us-east-1.amazonaws.com/photo.svg?response-content-disposition=inline&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEM3%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJIMEYCIQCdlP%2BhhNROsRedK0PyNg93YK946Fnn1t9o5V9I3w%2F9XgIhAJPxIFBlywXLUqX9HtnSCXMBzUqWu1FBoT4ps7wSfZDZKvECCMb%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMNTY5NjkwNTY5NjM4IgyYUyaoqf78%2Bw6xlTMqxQLGxQ2RJlUiKlih4QJd5PAMrYWuaGLLd5n5TApzLVczImrlujOyLYdpzpLG0iHlZRg3boMMEvvbSwpuOmWSnGPa0tG9igWcaDU1si6PkEpVRhD8iVFn99jUu%2BAZdob4gGor7sTxpi2rinw3Imp4gHI13PHUyTjwdZwD%2BwLbfNDIH8mH9nTRcfFR0Sd3oZlIpTkNjY4gXMS%2BZpcer%2F70v1O18Mu6HvGEpCx55RInyW%2FoWEnMBKBFwgkDGIsOx2uYebPhnAcZMI%2BoqX4GHOB9LIuZYPM8wu0pkDeW9kpEJaCeVeWxu8uvqkmCc7ZkN7haHOXKEjYGMC%2FQpKiOE8mkD7Rj00TQwR7g2EGz4Yi0UaFogw04FlzGmhnA65Bx3obKtTBhZO%2Bk26zMWJZYeivTgi4hj5Rqt%2BtlI%2F%2F99JnfjIva8K2N6BDoMMeOkaIGOrICGk9OairoXw5KRiMhAxnmjWw9mpQGORr2282eLXz1C8wATvUDb9bEnq1BHZ77Kv%2FZF%2BlFb9VxyiEit7z9snV8cwguNcrVTjXgyoNqr1ciqvUux%2FPIGrqh3tQlS%2BU%2FP99bHssMpHzWDq2dxCkoJdaBgXC0NJmlPZb5EnErsnOor%2BI%2BGcsoBR9ehjHISDQ8KnKx8Bw3bsqn2d57PtETN66aVpzv3kky9ecuM9lnKvL5SOPfhQrPrT%2Faf4xD4U1ERieBwwMBWFgZZamq5UTNGZm56llOurQDZDvTMdKu9TEgaCxyXxAQJ3AxYORL%2BCMPGnqmyeqfKfv%2FofYY%2FhNQMENFreoO%2FUgnWQomPikW1d6UXtNaqjXgveu4zvXGpbs8wJL7kxQDpbAhHmr0BL5svHrpCd1x&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20230422T215956Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAYJJBUHOTG7SCIYGG%2F20230422%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=afa04fbdb0d272cc5c67a4b626f69661b02bbcc34fd86d5b79d6978125e7eca0"/>
                 </button>
               </label>
               <input
