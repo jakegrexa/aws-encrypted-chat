@@ -8,5 +8,21 @@ type Message
   ) {
   id: ID!
   owner: String!
-  message: String!
+	content: MessageContent!
+}
+
+type MessageContent {
+	text: String
+	imageId: String
+}
+
+input MessageInput {
+	content: MessageContentInput!
+	roomId: ID!
+	id: ID
+}
+
+input MessageContentInput {
+	text: String
+	imageId: String
 }
