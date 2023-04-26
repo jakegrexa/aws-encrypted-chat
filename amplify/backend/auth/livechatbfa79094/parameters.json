@@ -1,16 +1,14 @@
 {
-  "version": "1",
-  "cognitoConfig": {
-    "identityPoolName": "awsencryptedchat1199ab4e_identitypool_1199ab4e",
+    "identityPoolName": "livechatbfa79094_identitypool_bfa79094",
     "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "awsenc1199ab4e",
-    "userPoolName": "awsencryptedchat1199ab4e_userpool_1199ab4e",
+    "resourceNameTruncated": "livechbfa79094",
+    "userPoolName": "livechatbfa79094_userpool_bfa79094",
     "autoVerifiedAttributes": [
-      "email"
+        "email"
     ],
     "mfaConfiguration": "OFF",
     "mfaTypes": [
-      "SMS Text Message"
+        "SMS Text Message"
     ],
     "smsAuthenticationMessage": "Your authentication code is {####}",
     "smsVerificationMessage": "Your verification code is {####}",
@@ -20,26 +18,36 @@
     "passwordPolicyMinLength": 8,
     "passwordPolicyCharacters": [],
     "requiredAttributes": [
-      "email"
+        "email"
     ],
-    "aliasAttributes": [],
     "userpoolClientGenerateSecret": false,
     "userpoolClientRefreshTokenValidity": 30,
     "userpoolClientWriteAttributes": [
-      "email"
+        "email"
     ],
     "userpoolClientReadAttributes": [
-      "email"
+        "email"
     ],
-    "userpoolClientLambdaRole": "awsenc1199ab4e_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "livechbfa79094_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "1199ab4e",
-    "resourceName": "awsencryptedchat1199ab4e",
+    "sharedId": "bfa79094",
+    "resourceName": "livechatbfa79094",
     "authSelections": "identityPoolAndUserPool",
+    "authRoleArn": {
+        "Fn::GetAtt": [
+            "AuthRole",
+            "Arn"
+        ]
+    },
+    "unauthRoleArn": {
+        "Fn::GetAtt": [
+            "UnauthRole",
+            "Arn"
+        ]
+    },
     "useDefault": "default",
     "userPoolGroupList": [],
     "serviceName": "Cognito",
     "usernameCaseSensitive": false,
-    "useEnabledMfas": true
-  }
+    "dependsOn": []
 }
